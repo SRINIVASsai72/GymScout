@@ -40,6 +40,7 @@ const Gyms = () => {
 
   useEffect(() => {
     fetchGyms();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
