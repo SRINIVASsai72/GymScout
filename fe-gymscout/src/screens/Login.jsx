@@ -31,7 +31,7 @@ export default function Login() {
 
   try {
     const res = await axios.post(
-      "http://localhost:3001/auth/login",
+      "https://gymscout-ik2w.onrender.com/auth/login",
       user
     );
 

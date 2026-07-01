@@ -28,7 +28,7 @@ export default function Edit() {
 
   useEffect(() => {
     const fetchGym = async () => {
-      const res = await axios.get(`http://localhost:3001/gyms/${id}`);
+      const res = await axios.get(`https://gymscout-ik2w.onrender.com/gyms/${id}`);
       setGym({
         ...res.data.gym,
         lat: res.data.gym.coordinates?.lat || "",
@@ -65,7 +65,7 @@ export default function Edit() {
     }
 
     try {
-    await axios.put(`http://localhost:3001/gyms/${id}`, formData, {
+    await axios.put(`https://gymscout-ik2w.onrender.com/gyms/${id}`, formData, {
         headers: {
         Authorization: `Bearer ${token}`,
         },

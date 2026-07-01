@@ -32,7 +32,7 @@ const Gyms = () => {
   if (sort) params.append("sort", sort);
 
   const res = await axios.get(
-    `http://localhost:3001/gyms?${params.toString()}`
+    `https://gymscout-ik2w.onrender.com/gyms?${params.toString()}`
   );
 
   setGyms(res.data.gyms);
@@ -100,7 +100,7 @@ const Gyms = () => {
             setSearch("");
             setCity("");
             setSort("");
-            axios.get("http://localhost:3001/gyms").then((res) => {
+            axios.get("https://gymscout-ik2w.onrender.com/gyms").then((res) => {
               setGyms(res.data.gyms);
             });
           }}

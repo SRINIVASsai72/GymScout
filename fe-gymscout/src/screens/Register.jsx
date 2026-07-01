@@ -31,7 +31,7 @@ export default function Register() {
   e.preventDefault();
 
   try {
-    await axios.post("http://localhost:3001/auth/register", user);
+    await axios.post("https://gymscout-ik2w.onrender.com/auth/register", user);
 
     navigate("/login");
   } catch (err) {

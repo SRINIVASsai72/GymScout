@@ -33,7 +33,7 @@ const Show = () => {
   const averageRating = gym?.reviews?.length > 0 ? gym.reviews.reduce((sum, review) => sum + review.rating, 0) / gym.reviews.length  : 0;
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/gyms/${id}`).then((res) => {
+    axios.get(`https://gymscout-ik2w.onrender.com/gyms/${id}`).then((res) => {
       setGym(res.data.gym);
     });
   }, [id]);
@@ -42,7 +42,7 @@ const Show = () => {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://localhost:3001/gyms/${id}`, {
+      await axios.delete(`https://gymscout-ik2w.onrender.com/gyms/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -64,7 +64,7 @@ const Show = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.post(
-        `http://localhost:3001/gyms/${id}/reviews`,
+        `https://gymscout-ik2w.onrender.com/gyms/${id}/reviews`,
         { review },
         {
           headers: {
@@ -94,7 +94,7 @@ const Show = () => {
       const token = localStorage.getItem("token");
 
       await axios.delete(
-        `http://localhost:3001/gyms/${id}/reviews/${reviewId}`,
+        `https://gymscout-ik2w.onrender.com/gyms/${id}/reviews/${reviewId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -50,7 +50,7 @@ export default function New() {
 
     const token = localStorage.getItem("token");
 
-    const res = await axios.post("http://localhost:3001/gyms", formData, {
+    const res = await axios.post("https://gymscout-ik2w.onrender.com/gyms", formData, {
     headers: {
         Authorization: `Bearer ${token}`,
     },
